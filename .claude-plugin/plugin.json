@@ -1,0 +1,14 @@
+{
+    "name": "openhandle",
+    "displayName": "Openhandle",
+    "description": "Public Instagram, TikTok, X, and Reddit data, plus your Openhandle balance, usage, and request history.",
+    "author": {
+        "name": "Openhandle",
+        "email": "support@openhandle.dev",
+        "url": "https://openhandle.dev"
+    },
+    "homepage": "https://openhandle.dev/docs/mcp",
+    "repository": "https://github.com/openhandlehq/openhandle-claude",
+    "license": "MIT",
+    "keywords": ["social data", "instagram", "tiktok", "twitter", "reddit", "mcp"]
+}

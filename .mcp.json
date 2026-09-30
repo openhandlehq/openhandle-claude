@@ -1,0 +1,11 @@
+{
+    "mcpServers": {
+        "openhandle": {
+            "type": "http",
+            "url": "https://api.openhandle.dev/mcp",
+            "oauth": {
+                "scopes": "mcp read:account"
+            }
+        }
+    }
+}

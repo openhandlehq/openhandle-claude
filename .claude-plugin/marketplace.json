@@ -1,0 +1,16 @@
+{
+    "name": "openhandle",
+    "description": "Openhandle plugins for Claude Code",
+    "owner": {
+        "name": "Openhandle",
+        "email": "support@openhandle.dev",
+        "url": "https://openhandle.dev"
+    },
+    "plugins": [
+        {
+            "name": "openhandle",
+            "source": "./",
+            "description": "Public Instagram, TikTok, X, and Reddit data, plus your Openhandle balance, usage, and request history."
+        }
+    ]
+}
