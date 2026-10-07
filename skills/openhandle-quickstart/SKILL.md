@@ -54,6 +54,7 @@ Choose the SDK by the runtime that makes the server request. Use that runtime's 
 - Go 1.27 or newer: install `github.com/openhandlehq/openhandle-go`.
 - Python 3.10 or newer: install `openhandle`.
 - PHP 8.2 or newer: install `openhandle/sdk` with Composer.
+- Rust 1.85 or newer: install the `openhandle` crate with Cargo. It runs on Tokio.
 - Other runtimes: use the REST API at `https://api.openhandle.dev/v1`.
 
 For example, when Laravel owns data access in a Laravel + Next.js monorepo, install `openhandle/sdk` in Laravel. A JavaScript package manager does not make Next.js the integration boundary.
