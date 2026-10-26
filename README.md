@@ -1,6 +1,6 @@
 # Openhandle for Claude Code
 
-Ask Claude Code for public Instagram, TikTok, X, and Reddit data, and for your own Openhandle balance, usage, and request history.
+Ask Claude Code for public Instagram, TikTok, X, Reddit, and YouTube data, and for your own Openhandle balance, usage, and request history.
 
 ## Install
 
