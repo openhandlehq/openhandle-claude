@@ -1,13 +1,13 @@
 ---
 name: openhandle
-description: Use when the user asks for public Instagram, TikTok, X (Twitter), or Reddit data (profiles, posts, comments, followers, search, trends), or about their Openhandle account (balance, usage, spend, request history, failed requests, API keys). Covers tool choice, Test versus Live, cost, paging, and errors for the openhandle MCP server.
+description: Use when the user asks for public Instagram, TikTok, X (Twitter), Reddit, or YouTube data (profiles, posts, comments, followers, search, trends, transcripts), or about their Openhandle account (balance, usage, spend, request history, failed requests, API keys). Covers tool choice, Test versus Live, cost, paging, and errors for the openhandle MCP server.
 ---
 
 # Openhandle
 
 The `openhandle` MCP server gives you two groups of tools.
 
-- **Platform tools** read public social data. Each name starts with the platform, for example `instagram_get_profile`, `tiktok_search_posts`, `twitter_list_followers`, and `reddit_profile_get`. Each tool is one REST endpoint with the same inputs and answers.
+- **Platform tools** read public social data. Each name starts with the platform, for example `instagram_get_profile`, `tiktok_search_posts`, `twitter_list_followers`, `reddit_profile_get`, and `youtube_post_transcript_get`. Each tool is one REST endpoint with the same inputs and answers.
 - **Account tools** read the user's own Openhandle workspace: `account_get_balance`, `account_get_usage`, `account_list_requests`, `account_get_request`, and `account_list_api_keys`. They are free and never touch social platforms.
 
 If no Openhandle tools are visible, tell the user to connect Openhandle and approve in the browser. In Claude Code they run `/mcp` and pick `openhandle`. In ChatGPT they open the Openhandle plugin and connect it.
@@ -30,6 +30,7 @@ The credential picks the environment. Never send an environment argument.
 ## Answers
 
 - `null` means the platform does not expose the value. It does not mean zero. Say "not available", never "0".
+- YouTube lists show rounded counts and relative dates. When `metrics.isApproximate` is `true`, say "about". `createdAt` is exact; `approximateCreatedAt` is an estimated day. For exact numbers, read the single post with `youtube_post_get`.
 - Error answers carry a stable `code`, such as `PROFILE_NOT_FOUND` or `PROFILE_PRIVATE`. Explain the code in plain words. These definitive answers are billed in Live. Provider failures and internal errors are free.
 - Result metadata has `requestId`, `actualCharge`, and `liveEquivalentPrice`. When the user asks what a call cost, read `actualCharge`.
 
