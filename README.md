@@ -29,7 +29,7 @@ No account yet? Sign up free at [app.openhandle.dev](https://app.openhandle.dev/
 Try these prompts:
 
 ```text
-Show me the latest videos from the YouTube channel @mkbhd.
+Show me the latest videos from the YouTube channel MKBHD.
 What did I spend on Openhandle this week, per platform?
 Why did my requests fail today?
 ```
